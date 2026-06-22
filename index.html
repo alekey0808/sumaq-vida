@@ -484,7 +484,7 @@
     </div>
     <div class="formatos-nota">
       🎉 <strong>Promoción:</strong> compra 4 bolsitas por <strong>S/3.50</strong> o 5 bolsitas por <strong>S/4.50</strong> (en vez de pagarlas por separado).<br>
-      🥪 También tenemos <strong>sánguches de palta, queso o huevo</strong> a S/2.00 — o en combo <strong>jugo + sánguche por S/2.50</strong>.<br>
+      🥪 También tenemos <strong>sánguches de palta, queso o huevo</strong> a S/1.50 cada uno.<br>
       🥤 <strong>Próximamente:</strong> presentación en vaso individual, lista para tomar al instante.
     </div>
   </div>
@@ -496,48 +496,77 @@
     <div class="section-head">
       <span class="eyebrow">Pedido rápido</span>
       <h2>Arma tu pedido en 30 segundos</h2>
-      <p>Elige, y te abrimos WhatsApp con todo ya escrito. Sin formularios, sin dejar tus datos en ninguna parte.</p>
+      <p>Pon la cantidad exacta de cada jugo (con o sin leche) y tus sánguches. Al final te abrimos WhatsApp con todo ya escrito.</p>
     </div>
 
-    <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:var(--radius);padding:24px 22px;border:1px solid rgba(107,66,38,0.12);box-shadow:0 8px 24px rgba(107,66,38,0.07);">
+    <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:var(--radius);padding:24px 22px;border:1px solid rgba(107,66,38,0.12);box-shadow:0 8px 24px rgba(107,66,38,0.07);">
 
-      <div style="margin-bottom:18px;">
-        <label style="display:block;font-weight:600;color:var(--verde-oscuro);margin-bottom:8px;">¿Qué jugo quieres?</label>
-        <select id="ov-jugo" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(107,66,38,0.25);font-size:1rem;background:var(--crema);">
-          <option value="Quinua">Jugo de Quinua</option>
-          <option value="Cañihua">Jugo de Cañihua</option>
-          <option value="Maca">Jugo de Maca</option>
-          <option value="Variado (tú elige el surtido)">Variado (que ustedes elijan el surtido)</option>
-        </select>
+      <h3 style="font-size:1.1rem;margin-bottom:14px;color:var(--verde-oscuro);">🌾 Jugos (S/1.00 c/u — promo 4 = S/3.50, 5 = S/4.50)</h3>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:22px;">
+
+        <div style="border:1px solid rgba(107,66,38,0.15);border-radius:10px;padding:12px 14px;">
+          <strong style="display:block;margin-bottom:8px;color:var(--tierra);">Quinua</strong>
+          <div style="display:flex;gap:10px;">
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Sin leche</label>
+              <input type="number" min="0" value="0" id="q-quinua-sin" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Con leche</label>
+              <input type="number" min="0" value="0" id="q-quinua-con" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(107,66,38,0.15);border-radius:10px;padding:12px 14px;">
+          <strong style="display:block;margin-bottom:8px;color:var(--tierra);">Cañihua</strong>
+          <div style="display:flex;gap:10px;">
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Sin leche</label>
+              <input type="number" min="0" value="0" id="q-canihua-sin" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Con leche</label>
+              <input type="number" min="0" value="0" id="q-canihua-con" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(107,66,38,0.15);border-radius:10px;padding:12px 14px;">
+          <strong style="display:block;margin-bottom:8px;color:var(--tierra);">Maca</strong>
+          <div style="display:flex;gap:10px;">
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Sin leche</label>
+              <input type="number" min="0" value="0" id="q-maca-sin" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+            <div style="flex:1;">
+              <label style="font-size:0.82rem;color:#8a8174;">Con leche</label>
+              <input type="number" min="0" value="0" id="q-maca-con" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div style="margin-bottom:18px;">
-        <label style="display:block;font-weight:600;color:var(--verde-oscuro);margin-bottom:8px;">¿Cuántas bolsitas?</label>
-        <select id="ov-cantidad" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(107,66,38,0.25);font-size:1rem;background:var(--crema);">
-          <option value="1">1 bolsita — S/1.00</option>
-          <option value="2">2 bolsitas — S/2.00</option>
-          <option value="3">3 bolsitas — S/3.00</option>
-          <option value="4">4 bolsitas — S/3.50 (promo)</option>
-          <option value="5">5 bolsitas — S/4.50 (promo)</option>
-        </select>
+      <h3 style="font-size:1.1rem;margin-bottom:14px;color:var(--verde-oscuro);">🥪 Sánguches (S/1.50 c/u)</h3>
+      <div style="display:flex;gap:10px;margin-bottom:10px;">
+        <div style="flex:1;">
+          <label style="font-size:0.82rem;color:#8a8174;">Palta</label>
+          <input type="number" min="0" value="0" id="s-palta" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:0.82rem;color:#8a8174;">Queso</label>
+          <input type="number" min="0" value="0" id="s-queso" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:0.82rem;color:#8a8174;">Huevo</label>
+          <input type="number" min="0" value="0" id="s-huevo" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(107,66,38,0.25);">
+        </div>
       </div>
 
-      <div style="margin-bottom:18px;">
-        <label style="display:block;font-weight:600;color:var(--verde-oscuro);margin-bottom:8px;">¿Con leche o sin leche?</label>
-        <select id="ov-leche" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(107,66,38,0.25);font-size:1rem;background:var(--crema);">
-          <option value="Sin leche">Sin leche</option>
-          <option value="Con leche">Con leche</option>
-        </select>
-      </div>
-
-      <div style="margin-bottom:22px;">
-        <label style="display:block;font-weight:600;color:var(--verde-oscuro);margin-bottom:8px;">¿Quieres un sánguche?</label>
-        <select id="ov-sanguche" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(107,66,38,0.25);font-size:1rem;background:var(--crema);">
-          <option value="">No, gracias</option>
-          <option value="Sánguche de palta">Sánguche de palta — S/2.00</option>
-          <option value="Sánguche de queso">Sánguche de queso — S/2.00</option>
-          <option value="Sánguche de huevo">Sánguche de huevo — S/2.00</option>
-        </select>
+      <div id="ov-total" style="text-align:center;font-weight:700;color:var(--terracota);font-size:1.15rem;margin:18px 0;font-family:'Fraunces',serif;">
+        Total estimado: S/0.00
       </div>
 
       <button onclick="enviarPedido()" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
@@ -549,17 +578,57 @@
 </section>
 
 <script>
-function enviarPedido(){
-  const jugo = document.getElementById('ov-jugo').value;
-  const cantidad = document.getElementById('ov-cantidad').value;
-  const leche = document.getElementById('ov-leche').value;
-  const sanguche = document.getElementById('ov-sanguche').value;
+function precioJugos(total){
+  if(total <= 0) return 0;
+  if(total < 4) return total * 1;
+  if(total === 4) return 3.5;
+  if(total === 5) return 4.5;
+  return 4.5 + (total - 5) * 1; // por encima de 5, S/1 adicional cada una
+}
 
-  let mensaje = `Hola! Quiero pedir:%0A- ${cantidad} bolsita(s) de jugo de ${jugo}%0A- ${leche}`;
-  if(sanguche){
-    mensaje += `%0A- ${sanguche}`;
+function actualizarTotal(){
+  const qs = id => parseInt(document.getElementById(id).value) || 0;
+  const totalJugos = qs('q-quinua-sin')+qs('q-quinua-con')+qs('q-canihua-sin')+qs('q-canihua-con')+qs('q-maca-sin')+qs('q-maca-con');
+  const totalSanguches = qs('s-palta')+qs('s-queso')+qs('s-huevo');
+  const total = precioJugos(totalJugos) + totalSanguches * 1.5;
+  document.getElementById('ov-total').textContent = `Total estimado: S/${total.toFixed(2)}`;
+}
+
+document.querySelectorAll('#productos ~ section input[type="number"]').forEach(el=>{
+  el.addEventListener('input', actualizarTotal);
+});
+
+function enviarPedido(){
+  const qs = id => parseInt(document.getElementById(id).value) || 0;
+
+  const items = [
+    {label:'Quinua sin leche', val:qs('q-quinua-sin')},
+    {label:'Quinua con leche', val:qs('q-quinua-con')},
+    {label:'Cañihua sin leche', val:qs('q-canihua-sin')},
+    {label:'Cañihua con leche', val:qs('q-canihua-con')},
+    {label:'Maca sin leche', val:qs('q-maca-sin')},
+    {label:'Maca con leche', val:qs('q-maca-con')},
+  ].filter(i => i.val > 0);
+
+  const sanguches = [
+    {label:'Sánguche de palta', val:qs('s-palta')},
+    {label:'Sánguche de queso', val:qs('s-queso')},
+    {label:'Sánguche de huevo', val:qs('s-huevo')},
+  ].filter(i => i.val > 0);
+
+  if(items.length === 0 && sanguches.length === 0){
+    alert('Pon al menos un jugo o un sánguche antes de enviar tu pedido 🙂');
+    return;
   }
-  mensaje += `%0A%0A¿Está disponible? 🌾`;
+
+  const totalJugos = items.reduce((a,i)=>a+i.val,0);
+  const totalSanguches = sanguches.reduce((a,i)=>a+i.val,0);
+  const total = precioJugos(totalJugos) + totalSanguches * 1.5;
+
+  let mensaje = 'Hola! Quiero pedir:%0A';
+  items.forEach(i => { mensaje += `- ${i.val} jugo(s) de ${i.label}%0A`; });
+  sanguches.forEach(i => { mensaje += `- ${i.val} ${i.label}%0A`; });
+  mensaje += `%0ATotal aproximado: S/${total.toFixed(2)}%0A%0A¿Está disponible? 🌾`;
 
   window.open(`https://wa.me/51944765634?text=${mensaje}`, '_blank');
 }
