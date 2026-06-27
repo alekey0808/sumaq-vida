@@ -265,6 +265,119 @@
   .cta-banda h3{font-size:1.4rem;margin-bottom:8px;color:var(--verde-oscuro);}
   .cta-banda p{color:#5a4422;margin-bottom:20px;}
 
+  /* Promociones */
+  .promo-bg{
+    background:linear-gradient(160deg, var(--oro) 0%, #e0ad48 100%);
+    padding:64px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .promo-bg::before{
+    content:"";
+    position:absolute;
+    top:-60px; right:-60px;
+    width:220px; height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.12);
+  }
+  .promo-bg::after{
+    content:"";
+    position:absolute;
+    bottom:-50px; left:-50px;
+    width:180px; height:180px;
+    border-radius:50%;
+    background:rgba(63,107,63,0.12);
+  }
+  .promo-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    max-width:760px;
+    margin:0 auto 18px;
+    position:relative;
+    z-index:1;
+  }
+  .promo-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:24px 18px;
+    text-align:center;
+    box-shadow:0 10px 26px rgba(107,66,38,0.16);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    position:relative;
+  }
+  .promo-card-destacada{
+    background:var(--verde-oscuro);
+    transform:scale(1.03);
+    box-shadow:0 14px 32px rgba(44,77,44,0.35);
+  }
+  .promo-card-destacada .promo-cantidad{color:#fff;}
+  .promo-card-destacada .promo-ahorro{color:var(--oro);}
+  .promo-tag{
+    position:absolute;
+    top:-12px; left:50%;
+    transform:translateX(-50%);
+    background:var(--terracota);
+    color:#fff;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:4px 12px;
+    border-radius:999px;
+  }
+  .promo-cantidad{
+    font-family:'Fraunces',serif;
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--verde-oscuro);
+  }
+  .promo-ahorro{
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--terracota);
+  }
+  .promo-legal{
+    text-align:center;
+    font-size:0.82rem;
+    color:#5a4422;
+    max-width:560px;
+    margin:0 auto 22px;
+    position:relative;
+    z-index:1;
+  }
+  .combo-card{
+    max-width:560px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:var(--radius);
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 26px rgba(107,66,38,0.16);
+    position:relative;
+    z-index:1;
+    border:2px dashed var(--terracota);
+  }
+  .combo-emoji{font-size:2.2rem;flex-shrink:0;}
+  .combo-info{flex:1;}
+  .combo-info h3{font-size:1.15rem;color:var(--verde-oscuro);margin-bottom:2px;}
+  .combo-info p{font-size:0.92rem;color:#5a5346;}
+  .combo-precio-num{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.6rem;
+    color:var(--terracota);
+    white-space:nowrap;
+  }
+
+  @media (min-width:760px){
+    .promo-grid{grid-template-columns:repeat(3,1fr);}
+  }
+
   /* Cómo pedir */
   .pasos{
     display:grid;
@@ -483,9 +596,51 @@
       </div>
     </div>
     <div class="formatos-nota">
-      🎉 <strong>Promoción:</strong> compra 4 bolsitas por <strong>S/3.50</strong> o 5 bolsitas por <strong>S/4.50</strong> (en vez de pagarlas por separado).<br>
       🥪 También tenemos <strong>sánguches de palta, queso o huevo</strong> a S/1.50 cada uno.<br>
-      🥤 <strong>Próximamente:</strong> presentación en vaso individual, lista para tomar al instante.
+      🎉 ¿Sabías que compras desde 4 jugos ya tienen descuento? Mira nuestras <strong>promociones</strong> abajo.
+    </div>
+  </div>
+</section>
+
+<!-- Promociones -->
+<section class="promo-bg" id="promociones">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--verde-oscuro);">Ahorra más</span>
+      <h2 style="color:var(--verde-oscuro);">🎉 Promociones</h2>
+      <p style="color:#5a4422;">Mientras más jugos pidas, más ahorras. El descuento se aplica sobre el total de tu pedido.</p>
+    </div>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <span class="promo-cantidad">4 jugos</span>
+        <span class="promo-ahorro">Ahorra S/0.50</span>
+      </div>
+      <div class="promo-card promo-card-destacada">
+        <span class="promo-tag">Más pedido</span>
+        <span class="promo-cantidad">8 jugos</span>
+        <span class="promo-ahorro">Ahorra S/1.50</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-cantidad">12 jugos</span>
+        <span class="promo-ahorro">Ahorra S/3.00</span>
+      </div>
+    </div>
+    <p class="promo-legal">Se aplica solo el mayor descuento alcanzado por tu cantidad de jugos. Los niveles de descuento no se acumulan entre sí.</p>
+
+    <div class="combo-card">
+      <span class="combo-emoji">👨‍👩‍👧</span>
+      <div class="combo-info">
+        <h3>Combo Familiar</h3>
+        <p>5 jugos surtidos (tú eliges los sabores)</p>
+      </div>
+      <div class="combo-precio">
+        <span class="combo-precio-num">S/4.00</span>
+      </div>
+    </div>
+    <p class="promo-legal">✨ Los combos ya incluyen descuento y no se combinan con otras promociones.</p>
+
+    <div style="text-align:center;margin-top:26px;">
+      <a href="#productos" class="btn btn-outline">Ver jugos y armar mi pedido</a>
     </div>
   </div>
 </section>
@@ -584,10 +739,11 @@
 <script>
 function precioJugos(total){
   if(total <= 0) return 0;
-  if(total < 4) return total * 1;
-  if(total === 4) return 3.5;
-  if(total === 5) return 4.5;
-  return 4.5 + (total - 5) * 1; // por encima de 5, S/1 adicional cada una
+  // Se aplica solo el mayor descuento alcanzado (no acumulable entre niveles)
+  if(total >= 12) return (total * 1) - 3.00;
+  if(total >= 8)  return (total * 1) - 1.50;
+  if(total >= 4)  return (total * 1) - 0.50;
+  return total * 1;
 }
 
 function actualizarTotal(){
@@ -714,56 +870,6 @@ function enviarPedido(){
   </div>
 </section>
 
-<!-- Galería -->
-<section style="background:var(--crema-2);">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Galería</span>
-      <h2>El sabor de la tradición andina</h2>
-      <p>Inspirado en los ingredientes que usamos en cada preparación.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-item" style="background:#fff;border-color:rgba(107,66,38,0.12);">
-        <svg viewBox="0 0 200 160" width="100%" aria-hidden="true">
-          <rect width="200" height="160" rx="14" fill="#FAF4E8"/>
-          <ellipse cx="100" cy="120" rx="55" ry="10" fill="#E5D8B8"/>
-          <path d="M75 70 L125 70 L116 130 Q100 138 84 130 Z" fill="#C9962E"/>
-          <circle cx="60" cy="50" r="5" fill="#6B4226"/>
-          <circle cx="140" cy="45" r="5" fill="#3F6B3F"/>
-          <circle cx="150" cy="70" r="4" fill="#C9962E"/>
-          <circle cx="50" cy="75" r="4" fill="#C9962E"/>
-        </svg>
-        <h3 style="color:var(--verde-oscuro);margin-top:10px;">Granos de quinua</h3>
-        <p style="color:#5a5346;">La base nutritiva de nuestros jugos, cultivada en el altiplano.</p>
-      </div>
-      <div class="why-item" style="background:#fff;border-color:rgba(107,66,38,0.12);">
-        <svg viewBox="0 0 200 160" width="100%" aria-hidden="true">
-          <rect width="200" height="160" rx="14" fill="#FAF4E8"/>
-          <ellipse cx="100" cy="125" rx="50" ry="9" fill="#E5D8B8"/>
-          <rect x="78" y="55" width="44" height="75" rx="10" fill="#6B4226" opacity="0.85"/>
-          <path d="M78 60 Q100 45 122 60" stroke="#3F6B3F" stroke-width="5" fill="none"/>
-          <circle cx="65" cy="50" r="4" fill="#3F6B3F"/>
-          <circle cx="135" cy="55" r="4" fill="#3F6B3F"/>
-        </svg>
-        <h3 style="color:var(--verde-oscuro);margin-top:10px;">Cañihua tostada</h3>
-        <p style="color:#5a5346;">Tradición andina con un sabor tostado característico.</p>
-      </div>
-      <div class="why-item" style="background:#fff;border-color:rgba(107,66,38,0.12);">
-        <svg viewBox="0 0 200 160" width="100%" aria-hidden="true">
-          <rect width="200" height="160" rx="14" fill="#FAF4E8"/>
-          <ellipse cx="100" cy="125" rx="50" ry="9" fill="#E5D8B8"/>
-          <path d="M85 60 Q100 50 115 60 L120 110 Q100 122 80 110 Z" fill="#D9CBB0" stroke="#6B4226" stroke-width="2"/>
-          <path d="M70 100 Q60 90 65 75" stroke="#3F6B3F" stroke-width="5" fill="none"/>
-          <path d="M130 100 Q140 90 135 75" stroke="#3F6B3F" stroke-width="5" fill="none"/>
-        </svg>
-        <h3 style="color:var(--verde-oscuro);margin-top:10px;">Raíz de maca</h3>
-        <p style="color:#5a5346;">Energizante natural, cultivada en las alturas andinas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
 <section>
   <div class="container">
     <div class="section-head">
